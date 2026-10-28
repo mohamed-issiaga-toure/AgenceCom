@@ -1,93 +1,74 @@
-# Free React / Next.js landing page template
+# Pus Touré Com
 
-![Open React / Next.js template preview](https://github.com/user-attachments/assets/522a5e46-2a0e-48ca-80eb-87c7fa58f3ea)
+Site vitrine de **Pus Touré Com**, agence conseil en communication et stratégie digitale basée à Conakry, en Guinée.
 
-**Open** is a **free React / Next.js landing page template built with Tailwind CSS** for developers/makers who want to create a quick and professional landing page for their open source projects, SaaS products, online services, and more.
+L’agence accompagne les entreprises, les marques et les organisateurs d’événements pour promouvoir leurs produits, services et événements : stratégie de communication, lancement de produits, identité de marque, gestion des réseaux sociaux, publicité digitale et couverture média.
 
-**UPDATE 2025-02-04** Added Tailwind v4 support!
+## Pages du site
 
-Use it for whatever you want, and be sure to reach us out on [Twitter](https://twitter.com/Cruip_com) if you build anything cool/useful with it.
+Le site comporte cinq pages accessibles depuis la navigation principale :
 
-Created and maintained with ❤️ by [Cruip.com](https://cruip.com).
+| Route | Page | Contenu |
+| --- | --- | --- |
+| `/` | Accueil | Présentation de l’agence, de ses deux pôles d’expertise et appels à l’action vers les réalisations et le formulaire de contact. |
+| `/about` | À propos | Histoire et vision de l’agence, valeurs et méthode de travail en quatre étapes. |
+| `/services` | Nos services | Offres de communication événementielle et de communication d’entreprise, avec une FAQ. |
+| `/portfolio` | Réalisations | Galerie de projets filtrable par catégorie et fiches détaillées. |
+| `/contact` | Contact & devis | Coordonnées de l’agence et formulaire de préparation d’une demande de devis. |
 
-_Version 1.0.0 built with the Cruip CSS is available [here](https://github.com/cruip/open-react-template/releases/tag/1.0.0)._
-_Version 2.0.3 built with Tailwind CSS and React + Vite is available [here](https://github.com/cruip/open-react-template/releases/tag/2.0.3)._
-_Version 3.3.0 (before redesign) built with Tailwind CSS and Next.js is available [here](https://github.com/cruip/open-react-template/releases/tag/3.3.0)._
+### Services
 
-## Live demo
+- **Communication événementielle :** teasing et billetterie, création d’affiches et de vidéos, couverture en direct, relations médias, influenceurs et partenaires.
+- **Communication d’entreprise et de produits :** identité de marque, stratégie éditoriale et community management, campagnes Meta Ads et Google Ads, sites vitrines et applications.
 
-Check the live demo here 👉️ [https://open.cruip.com/](https://open.cruip.com/)
+### Méthode de travail
 
-## Open PRO
+1. **Brief et immersion** : comprendre le produit, l’événement, le public et les objectifs.
+2. **Stratégie médias et contenu** : définir le positionnement, les contenus et le calendrier.
+3. **Déploiement et campagne** : activer les canaux digitaux et les actions de terrain.
+4. **Analyse et reporting** : suivre les indicateurs pertinents et présenter les retombées.
 
-[![Open Pro](https://github.com/user-attachments/assets/2062c728-95f1-4d59-aa2d-d63556f625d5)](https://cruip.com/)
+## Technologies
 
-## Design files
+- Next.js 15 avec App Router
+- React et TypeScript
+- Tailwind CSS 4 et feuilles de style CSS
 
-If you need the design files, you can download them from Figma's Community 👉 https://bit.ly/401KSUS
+Le projet utilise actuellement son propre CSS pour l’interface. Lucide Icons, Framer Motion, shadcn/ui et 21st.dev, cités dans les spécifications initiales, ne sont pas des dépendances installées.
 
-## Usage
+## Installation et développement
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-### Getting Started
-
-First, run the development server:
+Prérequis : Node.js et Corepack.
 
 ```bash
-npm run dev
-# or
-pnpm dev (recommended)
-# or
-yarn dev
+corepack pnpm install
+corepack pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le site de développement est disponible à l’adresse [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Pour générer la version de production :
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+corepack pnpm build
+corepack pnpm start
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Configuration des coordonnées
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+La page Contact accepte les variables d’environnement suivantes :
 
-### Learn More
+| Variable | Description |
+| --- | --- |
+| `NEXT_PUBLIC_AGENCY_EMAIL` | Adresse e-mail de l’agence |
+| `NEXT_PUBLIC_AGENCY_PHONE` | Téléphone ou WhatsApp de l’agence |
+| `NEXT_PUBLIC_INSTAGRAM_URL` | Lien Instagram |
+| `NEXT_PUBLIC_FACEBOOK_URL` | Lien Facebook |
+| `NEXT_PUBLIC_LINKEDIN_URL` | Lien LinkedIn |
+| `NEXT_PUBLIC_GITHUB_URL` | Lien GitHub |
 
-To learn more about Next.js, take a look at the following resources:
+Si une variable n’est pas définie, le site affiche les coordonnées de remplacement configurées dans la page Contact. Le formulaire ouvre l’application de messagerie du visiteur avec un courriel prérempli ; il n’envoie pas les demandes à un serveur.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Données de démonstration à remplacer
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-### Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-### Support notes
-
-This template has been developed with the App Router (`app`) and React Server Components. If you’re unfamiliar with these beta features, you can find more information about them on the Next.js beta documentation page. So, please note that any request dealing with React (e.g. extra features, customisations, et cetera) is to be considered out of the support scope.
-
-For more information about what support covers, please see our (FAQs)[https://cruip.com/faq/].
-
-## Credits
-
-- [Nucleo](https://nucleoapp.com/)
-
-## Terms and License
-
-- Released under the [GPL](https://www.gnu.org/licenses/gpl-3.0.html).
-- Copyright 2024 [Cruip](https://cruip.com/).
-- Use it for personal and commercial projects, but please don’t republish, redistribute, or resell the template.
-- Attribution is not required, although it is really appreciated.
-
-## About Us
-
-We're an Italian developer/designer duo creating high-quality design/code resources for developers, makers, and startups.
-
-## Stay in the loop
-
-If you would like to know when we release new resources, you can follow [@pacovitiello](https://x.com/pacovitiello) and [@DavidePacilio](https://x.com/DavidePacilio) on X, or you can subscribe to our [newsletter](https://cruip.com/newsletter/).
+Les cartes et études de cas du portfolio sont des exemples de présentation, pas des références vérifiées. Les visuels et résultats doivent être remplacés par des contenus autorisés et des données réelles de l’agence avant publication. Les indicateurs d’impact de la page d’accueil sont également des éléments de présentation et ne constituent pas des statistiques mesurées.

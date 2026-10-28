@@ -25,6 +25,7 @@ export default function ContactForm({ agencyEmail }: { agencyEmail: string }) {
       String(formData.get("message") || ""),
     ].join("\n");
 
+    // Le formulaire prépare un courriel dans l’application de messagerie du visiteur.
     window.location.href = `mailto:${agencyEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setNotice("Votre application de messagerie va s'ouvrir avec le brief prérempli.");
   }

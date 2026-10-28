@@ -26,6 +26,7 @@ export default function ScrollReveal({ children }: { children: React.ReactNode }
     const elements = Array.from(document.querySelectorAll<HTMLElement>(revealSelector));
     if (!elements.length || !("IntersectionObserver" in window)) return;
 
+    // Décale les animations des éléments  pour éviter leur apparition simultanée.
     const siblingIndexes = new Map<Element, number>();
     elements.forEach((element) => {
       const parent = element.parentElement;
